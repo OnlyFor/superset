@@ -74,7 +74,10 @@ class UploadToDatabaseForm(DynamicForm):
             return True
         schemas = database.get_schema_access_for_file_upload()
         if schemas and security_manager.get_schemas_accessible_by_user(
-            database, schemas, False
+            database,
+            None,  # for now use the default catalog
+            schemas,
+            False,
         ):
             return True
         return False

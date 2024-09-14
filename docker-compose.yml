@@ -151,7 +151,7 @@ services:
   superset-node:
     build:
       context: .
-      target: dev
+      target: superset-node
     environment:
       # set this to false if you have perf issues running the npm i; npm run dev in-docker
       # if you do so, you have to run this manually on the host, which should perform better!
